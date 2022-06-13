@@ -8,6 +8,7 @@ from ..models import Employee
 class RegistrationForm(FlaskForm):
     email = StringField('Email Address', validators=[Email(), DataRequired()])
     username = StringField('Username', validators=[DataRequired()])
+    employee_id = StringField('Employee ID', validators=[DataRequired()])
     first_name = StringField('First Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
     password = PasswordField('Password', validators=[
@@ -22,6 +23,10 @@ class RegistrationForm(FlaskForm):
     def validate_username(self, field):
         if Employee.query.filter_by(username=field.data).first():
             raise ValidationError('Username is already in use.')
+
+    def validate_employee_id(self, field):
+        if Employee.query.filter_by(id=field.data).first():
+            raise ValidationError('Employee ID is already in use.')
 
 
 class LoginForm(FlaskForm):

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>{{ title }} | Squad Master</title>
+    <title>{{ title }} | SG's E.M.S</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -11,26 +11,22 @@
     <link href="{{ url_for( 'static', filename='css/profile.css' ) }} " rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link rel="shortcut icon " href="{{ url_for( 'static', filename='img/favicon.ico' ) }} ">
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
-    <!-- bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
-    
+
 </head>
 
 <body>
-    <nav class="navbar navbar-default topnav " role="navigation ">
+    <nav class="navbar-bg navbar-default topnav " role="navigation ">
         <div class="container topnav ">
             <div class="navbar-header ">
-                <button type="button " class="navbar-toggle " data-toggle="collapse " data-target="#bs-example-navbar-collapse-1 ">
-                  <span class="sr-only ">Toggle navigation</span>
-                  <span class="icon-bar "></span>
-                  <span class="icon-bar "></span>
-                  <span class="icon-bar "></span>
-              </button>
-                <a class="navbar-brand topnav homelogo" href="{{ url_for( 'home.homepage') }} ">Squad Master</a>
+                <button type="button " class="navbar-toggle collapsed" data-toggle="collapse " data-target="#navbar">
+                    <span class="sr-only ">Toggle navigation</span>
+                    <span class="icon-bar "></span>
+                    <span class="icon-bar "></span>
+                    <span class="icon-bar "></span>
+                </button>
+                <a class="navbar-brand topnav homelogo" href="{{ url_for( 'home.homepage') }} ">Shubhra's E.M.S</a>
             </div>
-            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
+            <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_authenticated %} {% if current_user.is_admin %}
                     <li><a href="{{ url_for('home.admin_dashboard') }}">Dashboard</a></li>
@@ -43,20 +39,244 @@
                     <li><a href="{{ url_for('home.profile') }}">Profile</a></li>
                     {% endif %}
                     <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-                    <li><a><i class="fa fa-user"></i>  Hi, {{ current_user.username }}!</a></li>
+                    <li><a><i class="fa fa-user"></i> Hi, {{ current_user.username }}!</a></li>
                     {% else %}
                     <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
                     <li><a href="{{ url_for('auth.register') }}">Register</a></li>
                     <li><a href="{{ url_for('auth.login') }}">Login</a></li>
                     {% endif %}
                 </ul>
-
             </div>
         </div>
     </nav>
     <div class="wrapper ">
         {% block body %} {% endblock %}
         <div class="push "></div>
+    </div>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <div class="bg">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="margin:auto;background:#f1f2f3;display:block;z-index:1;" width="100vw" height="100vh"
+            preserveAspectRatio="xMidYMid" viewBox="0 0 200 100">
+            <defs>
+                <pattern id="pid-0.948721358880156" x="0" y="0" width="204.8" height="204.8"
+                    patternUnits="userSpaceOnUse">
+                    <g transform="scale(0.8)">
+                        <circle cx="165.13437655792998" cy="93.66923389774327" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;24.751150779956312" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-9.295816163367672s">
+                            </animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-9.295816163367672s">
+                            </animate>
+                        </circle>
+                        <circle cx="153.42604581234644" cy="69.38860064499532" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;8.743803877855825" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-9.605066392741639s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-9.605066392741639s"></animate>
+                        </circle>
+                        <circle cx="250.65464173430095" cy="142.13176305507633" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;2.641148391989163" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-1.5163199932960894s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-1.5163199932960894s"></animate>
+                        </circle>
+                        <circle cx="155.92558924059193" cy="101.73866984257073" r="0" fill="none" stroke="#f29c98"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;6.620001005538011" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.5389734060120244s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.5389734060120244s"></animate>
+                        </circle>
+                        <circle cx="184.16613735519783" cy="117.46954544580885" r="0" fill="none" stroke="#f29c98"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;17.717563918017717" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.7745163820656132s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.7745163820656132s"></animate>
+                        </circle>
+                        <circle cx="209.7906379853996" cy="212.52612620105032" r="0" fill="none" stroke="#f29c98"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;7.288608733833486" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-6.333097136527749s">
+                            </animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-6.333097136527749s">
+                            </animate>
+                        </circle>
+                        <circle cx="90.87798752504384" cy="116.39943442885732" r="0" fill="none" stroke="#f29c98"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;3.509379907694755" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-3.0190594204655334s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-3.0190594204655334s"></animate>
+                        </circle>
+                        <circle cx="42.0985611042264" cy="41.604500038149574" r="0" fill="none" stroke="#f5b697"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;14.17788236407838" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-0.06084682878808368s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-0.06084682878808368s"></animate>
+                        </circle>
+                        <circle cx="223.9706183490679" cy="142.80549817195916" r="0" fill="none" stroke="#f5b697"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;22.926727054356792" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-9.995598893200986s">
+                            </animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-9.995598893200986s">
+                            </animate>
+                        </circle>
+                        <circle cx="120.24668208387882" cy="0.6854995775137006" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;28.11245579617259" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-5.372700555114214s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-5.372700555114214s"></animate>
+                        </circle>
+                        <circle cx="120.24668208387882" cy="256.6854995775137" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;28.11245579617259" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-5.372700555114214s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-5.372700555114214s"></animate>
+                        </circle>
+                        <circle cx="210.93328349745897" cy="228.37549524391872" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;20.67914137588837" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-7.312697222989353s">
+                            </animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-7.312697222989353s">
+                            </animate>
+                        </circle>
+                        <circle cx="157.20800017931535" cy="163.01039712144186" r="0" fill="none" stroke="#f5b697"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;18.349186794398737" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-3.3693661782900457s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-3.3693661782900457s"></animate>
+                        </circle>
+                        <circle cx="181.38611783381654" cy="78.43866894542023" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;27.102920478492617" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.6827632378794602s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.6827632378794602s"></animate>
+                        </circle>
+                        <circle cx="47.790983104275064" cy="129.96380564721716" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;26.500149411741692" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-9.752966493116727s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-9.752966493116727s"></animate>
+                        </circle>
+                        <circle cx="131.27027773328928" cy="72.367906346411" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;12.837917520379849" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-0.5253219384907015s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-0.5253219384907015s"></animate>
+                        </circle>
+                        <circle cx="177.82146617216924" cy="0.13145664857824627" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;26.178218926995616" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.6194146295767822s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.6194146295767822s"></animate>
+                        </circle>
+                        <circle cx="177.82146617216924" cy="256.13145664857825" r="0" fill="none" stroke="#f5e797"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;26.178218926995616" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.6194146295767822s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.6194146295767822s"></animate>
+                        </circle>
+                        <circle cx="139.56525456816135" cy="228.45324079436736" r="0" fill="none" stroke="#f5b697"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;22.048082670074383" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.03868191876384097s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-0.03868191876384097s"></animate>
+                        </circle>
+                        <circle cx="111.02322511260121" cy="220.34522331573723" r="0" fill="none" stroke="#f29c98"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;6.083345483746509" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-5.633260381777501s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-5.633260381777501s"></animate>
+                        </circle>
+                        <circle cx="136.52600931659362" cy="183.43856319088465" r="0" fill="none" stroke="#f29c98"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;16.135162392156122" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-8.52768867276564s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="3.3333333333333335s"
+                                begin="-8.52768867276564s"></animate>
+                        </circle>
+                        <circle cx="42.26110090411121" cy="41.237729748479865" r="0" fill="none" stroke="#f5b697"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;14.07164685466016" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-7.351042095646696s"></animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="2.5s"
+                                begin="-7.351042095646696s"></animate>
+                        </circle>
+                        <circle cx="244.1114911206052" cy="129.44102434163662" r="0" fill="none" stroke="#f5b697"
+                            stroke-width="3">
+                            <animate attributeName="r" values="0;3.3635365083277025" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-3.249466961150054s">
+                            </animate>
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="spline"
+                                repeatCount="indefinite" keySplines="0 0.5 0.5 1" dur="5s" begin="-3.249466961150054s">
+                            </animate>
+                        </circle>
+                    </g>
+                </pattern>
+            </defs>
+            <rect x="0" y="0" width="1084" height="322" fill="url(#pid-0.948721358880156)"></rect>
+        </svg>
     </div>
 </body>
 

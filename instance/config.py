@@ -6,6 +6,7 @@ class Config(object):
     SECRET_KEY = os.urandom(32)
     SECRET_KEY = SECRET_KEY
     SQLALCHEMY_DATABASE_URI='sqlite:///EmployeeData.db'
+    # SQLALCHEMY_DATABASE_URI=''
     # Put any configurations here that are common across all environments
 
 

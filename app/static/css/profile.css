@@ -5,7 +5,11 @@ p {
 #mainwrap {
     text-align: center;
     display: block;
-    margin-top: 6%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+    padding: 30px;
+    /* margin-top: 6%; */
 }
 
 #avatar {

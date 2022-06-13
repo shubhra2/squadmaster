@@ -34,10 +34,10 @@ def add_department():
             # add department to the database
             db.session.add(department)
             db.session.commit()
-            flash('You have successfully added a new department.')
+            flash('You have successfully added a new department.', 'success')
         except:
             # in case department name already exists
-            flash('Error: department name already exists.')
+            flash('Error: department name already exists.', 'danger')
 
         # redirect to departments page
         return redirect(url_for('admin.list_departments'))
@@ -64,7 +64,7 @@ def edit_department(id):
         department.name = form.name.data
         department.description = form.description.data
         db.session.commit()
-        flash('You have successfully edited the department.')
+        flash('You have successfully edited the department.', 'success')
 
         # redirect to the departments page
         return redirect(url_for('admin.list_departments'))
@@ -87,7 +87,7 @@ def delete_department(id):
     department = Department.query.get_or_404(id)
     db.session.delete(department)
     db.session.commit()
-    flash('You have successfully deleted the department.')
+    flash('You have successfully deleted the department.', 'success')
 
     # redirect to the departments page
     return redirect(url_for('admin.list_departments'))
@@ -126,10 +126,10 @@ def add_role():
             # add role to the database
             db.session.add(role)
             db.session.commit()
-            flash('You have successfully added a new role.')
+            flash('You have successfully added a new role.', 'success')
         except:
             # in case role name already exists
-            flash('Error: role name already exists.')
+            flash('Error: role name already exists.', 'danger')
 
         # redirect to the roles page
         return redirect(url_for('admin.list_roles'))
@@ -156,7 +156,7 @@ def edit_role(id):
         role.description = form.description.data
         db.session.add(role)
         db.session.commit()
-        flash('You have successfully edited the role.')
+        flash('You have successfully edited the role.', 'success')
 
         # redirect to the roles page
         return redirect(url_for('admin.list_roles'))
@@ -178,7 +178,7 @@ def delete_role(id):
     role = Role.query.get_or_404(id)
     db.session.delete(role)
     db.session.commit()
-    flash('You have successfully deleted the role.')
+    flash('You have successfully deleted the role.', 'success')
 
     # redirect to the roles page
     return redirect(url_for('admin.list_roles'))
@@ -220,7 +220,7 @@ def assign_employee(id):
         employee.grade = form.grade.data
         db.session.add(employee)
         db.session.commit()
-        flash('You have successfully assigned a department, paygrade and a role.')
+        flash('You have successfully assigned a department, paygrade and a role.', 'success')
 
         # redirect to the roles page
         return redirect(url_for('admin.list_employees'))
@@ -246,7 +246,7 @@ def delete_employee(id):
 
     db.session.delete(employee)
     db.session.commit()
-    flash('You have successfully deleted the account.')
+    flash('You have successfully deleted the account.', 'success')
 
     # redirect to the roles page
     return redirect(url_for('admin.list_employees'))
@@ -289,7 +289,7 @@ def add_grade():
             # add role to the database
             db.session.add(grade)
             db.session.commit()
-            flash('You have successfully added a new pay grade.')
+            flash('You have successfully added a new pay grade.', 'success')
         except:
             # in case role name already exists
             flash('Error: Pay Grade already exists.')
@@ -319,7 +319,7 @@ def edit_grade(id):
         grade.amount = form.amount.data
         db.session.add(grade)
         db.session.commit()
-        flash('You have successfully edited the Pay Grade.')
+        flash('You have successfully edited the Pay Grade.', 'success')
 
         # redirect to the roles page
         return redirect(url_for('admin.list_grades'))
@@ -341,7 +341,7 @@ def delete_grade(id):
     grade = Grade.query.get_or_404(id)
     db.session.delete(grade)
     db.session.commit()
-    flash('You have successfully deleted the pay grade.')
+    flash('You have successfully deleted the pay grade.', 'success')
 
     # redirect to the roles page
     return redirect(url_for('admin.list_grades'))

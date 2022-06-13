@@ -9,7 +9,7 @@ from ..models import Employee
 @home.route('/')
 def homepage():
 
-    return render_template('home/index.html', title='Welcome to Squad Master')
+    return render_template('home/index.html', title='Welcome to Shubhra\'s E.M.S')
 
 
 @home.route('/dashboard')

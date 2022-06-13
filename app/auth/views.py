@@ -17,6 +17,7 @@ def register():
     if form.validate_on_submit():
         employee = Employee(email=form.email.data,
                             username=form.username.data,
+                            id=form.employee_id.data,
                             first_name=form.first_name.data,
                             last_name=form.last_name.data,
                             password=form.password.data)
@@ -24,7 +25,7 @@ def register():
         # add employee to the database
         db.session.add(employee)
         db.session.commit()
-        flash('You have successfully registered! You may now login.')
+        flash('You have successfully registered! You may now login.', 'success')
 
         # redirect to the login page
         return redirect(url_for('auth.login'))
