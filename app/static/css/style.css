@@ -11,6 +11,10 @@ h3 {
     font-family: 'Quicksand', sans-serif;
 }
 
+.navbar{
+    margin-bottom: 0px;
+}
+
 a,
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
@@ -28,22 +32,12 @@ a:hover {
     color: #007ee5;
 }
 
-footer {
-    padding: 20px 0;
-    padding-top: 10px;
-    background-color: #f8f8f8;
-}
-
-p.copyright {
-    margin: 15px 0 0;
-}
-
-.alert-info {
+/* .alert-info {
     width: 50%;
     margin: auto;
     color: #007ee5;
     border-color: #007ee5;
-}
+} */
 
 .btn-default {
     border-color: #007ee5;
@@ -57,12 +51,14 @@ p.copyright {
 .center {
     margin: auto;
     width: 50%;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .content-section {
     padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
+    border: 1px solid #797979;
+    width: 50%;
+    /* border-top: 1px solid #e7e7e7; */
 }
 
 .footer,
@@ -72,7 +68,7 @@ p.copyright {
 }
 
 .intro-divider {
-    width: 400px;
+    /* width: 400px; */
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -81,17 +77,21 @@ p.copyright {
     padding-bottom: 8%;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.png) no-repeat center center;
-    background-size: cover;
+    /* background: url(../img/intro-bg.png) no-repeat center center;
+    background-size: cover; */
     height: 100%;
 }
 
 .intro-message {
-    position: relative;
+    /* position: relative;
     padding-top: 10%;
-    padding-bottom: 20%;
+    padding-bottom: 20%; */
     text-align: center;
-    margin-right: -66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: -66%; */
 }
 
 .intro-message>h1 {
@@ -115,9 +115,14 @@ p.copyright {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
     min-height: 100%;
-    height: auto !important;
-    height: 100%;
+    /* height: auto !important;
+    height: 100%; */
     margin: 0 auto -4em;
 }
 
@@ -172,7 +177,7 @@ body {
 }
 
 #out {
-    width: 200px;
+    /* width: 200px; */
     padding: 10px 20px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -191,19 +196,8 @@ body {
     color: white;
 }
 
-#message {
-    position: absolute;
-    z-index: 999;
-    width: 450px;
-    top: 55%;
-    left: 60%;
-    color: lightgrey;
-    text-align: center;
-    margin: 0;
-}
-
 #in {
-    width: 200px;
+    /* width: 200px; */
     padding: 10px 20px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;

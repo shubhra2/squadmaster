@@ -2,7 +2,10 @@ class Config(object):
     """
     Common configurations
     """
-
+    import os
+    SECRET_KEY = os.urandom(32)
+    SECRET_KEY = SECRET_KEY
+    SQLALCHEMY_DATABASE_URI='sqlite:///EmployeeData.db'
     # Put any configurations here that are common across all environments
 
 

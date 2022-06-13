@@ -7,7 +7,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 # local imports
-from config import app_config
+from instance.config import app_config
 
 # db variable initialization
 db = SQLAlchemy()
@@ -23,7 +23,7 @@ def create_app(config_name):
         app = Flask(__name__)
         app.config.update(
             SECRET_KEY=os.getenv('SECRET_KEY'),
-            SQLALCHEMY_DATABASE_URI=os.getenv('SQLALCHEMY_DATABASE_URI')
+            SQLALCHEMY_DATABASE_URI='sqlite:///EmployeeData.db',
         )
     else:    
         app = Flask(__name__, instance_relative_config=True)
@@ -58,5 +58,9 @@ def create_app(config_name):
     @app.errorhandler(500)
     def internal_server_error(error):
         return render_template('errors/500.html', title='Server Error'), 500
+
+    @app.before_first_request
+    def create_tables():
+        db.create_all()
 
     return app
